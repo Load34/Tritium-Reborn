@@ -167,6 +167,9 @@ import net.minecraft.world.chunk.storage.AnvilSaveConverter;
 import net.minecraft.world.storage.ISaveFormat;
 import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
+
+import net.optifine.Lang;
+
 import tritium.api.Wrapper;
 import tritium.api.utils.event.api.EventManager;
 import tritium.api.utils.event.events.DisplayFrameEvent;
@@ -762,6 +765,11 @@ public class Minecraft implements IThreadListener, IPlayerUsage {
 	public boolean isUnicode() {
 		return this.gameSettings.forceUnicodeFont;
 	}
+
+	public void reloadLanguageManager() {
+        this.mcLanguageManager.onResourceManagerReload(this.mcResourceManager);
+        Lang.resourcesReloaded();
+    }
 
 	public void refreshResources() {
 		List<IResourcePack> list = Lists.newArrayList(this.defaultResourcePacks);
