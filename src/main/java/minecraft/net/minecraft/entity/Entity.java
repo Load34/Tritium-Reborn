@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 
-import me.imflowow.tritium.utils.events.HitBoxEvent;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
@@ -1826,9 +1825,6 @@ public abstract class Entity implements ICommandSender {
 
 	public float getCollisionBorderSize() {
 		float size = 0.1F;
-		HitBoxEvent event = new HitBoxEvent(size);
-		EventManager.call(event);
-		size = event.getSize();
 		return size;
 	}
 

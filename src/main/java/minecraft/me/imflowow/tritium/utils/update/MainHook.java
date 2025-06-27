@@ -20,9 +20,9 @@ import org.apache.logging.log4j.Logger;
 
 import me.imflowow.tritium.core.Tritium;
 import me.imflowow.tritium.utils.information.Version.VersionType;
-import me.imflowow.tritium.utils.netease.mcac.AESUtil;
 import tritium.api.utils.HttpUtils;
 import tritium.api.utils.StringUtils;
+
 public class MainHook {
 	public static void run(String[] p_main_0_) {
 		try {

@@ -21,33 +21,4 @@ public class ServerUtils {
 				: Minecraft.getMinecraft().getCurrentServerData().serverIP.toLowerCase();
 	}
 
-	public static boolean isDoMCer() {
-		String ip = getServerIP();
-		if (ip != null) {
-			if (ip.contains("domcer.domcer.com")) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public static boolean isMCAC() {
-		String ip = getServerIP();
-		if (ip != null) {
-			if (ip.contains("join.mchycraft.com")) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	public static boolean isEPlus() {
-		String ip = getServerIP();
-		if (ip != null) {
-			if (ip.contains("play.qyzgmc.com")) {
-				return true;
-			}
-		}
-		return false;
-	}
 }

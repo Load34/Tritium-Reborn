@@ -13,9 +13,6 @@ import me.imflowow.tritium.client.libraries.library.StaffModules;
 import me.imflowow.tritium.client.ui.clickgui.ClickGui;
 import me.imflowow.tritium.utils.Rotation;
 import me.imflowow.tritium.utils.itemscroller.ItemScroller;
-import me.imflowow.tritium.utils.netease.DoMCerUtils;
-import me.imflowow.tritium.utils.netease.EPlusUtils;
-import me.imflowow.tritium.utils.netease.MCACUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityBlaze;
@@ -51,12 +48,7 @@ public class ClientListener {
 
 	public ClientCape clientcape;
 
-	public DoMCerUtils domcer;
-	public MCACUtils mcac;
-	public EPlusUtils eplus;
-
 	public ItemScroller is;
-
 
 	public ClientListener() {
 		EventManager.register(this);
@@ -64,10 +56,6 @@ public class ClientListener {
 		EventManager.register(is);
 
 		this.clientcape = new ClientCape();
-
-		this.domcer = new DoMCerUtils();
-		this.mcac = new MCACUtils();
-
 	}
 
 	@EventTarget

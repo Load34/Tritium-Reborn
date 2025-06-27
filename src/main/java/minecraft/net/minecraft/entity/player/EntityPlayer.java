@@ -6,7 +6,6 @@ import com.google.common.collect.Lists;
 import com.mojang.authlib.GameProfile;
 import me.imflowow.tritium.core.Tritium;
 import me.imflowow.tritium.core.modules.OldAnimations;
-import me.imflowow.tritium.utils.events.SlowdownEvent;
 
 import java.util.Collection;
 import java.util.List;
@@ -1364,13 +1363,9 @@ public abstract class EntityPlayer extends EntityLivingBase
                         if (i > 0)
                         {
                             targetEntity.addVelocity((double)(-MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F), 0.1D, (double)(MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F) * (float)i * 0.5F));
-                            final SlowdownEvent event = new SlowdownEvent(SlowdownEvent.Type.Sprinting,0.6);
-                            EventManager.call(event);
-                            if (!event.isCancelled()) {
-                                this.motionX *= event.getSpeed();
-                                this.motionZ *= event.getSpeed();
-                                this.setSprinting(false);
-                            }
+                            this.motionX *= 0.6F;
+                            this.motionZ *= 0.6F;
+                            this.setSprinting(false);
                         }
 
                         if (targetEntity instanceof EntityPlayerMP && targetEntity.velocityChanged)

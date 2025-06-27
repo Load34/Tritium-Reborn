@@ -8,7 +8,6 @@ import me.imflowow.tritium.core.Tritium;
 import me.imflowow.tritium.core.globals.ClientConfig;
 import me.imflowow.tritium.core.modules.Fullbright;
 import me.imflowow.tritium.core.modules.Perspective;
-import me.imflowow.tritium.utils.events.ReachEvent;
 import me.imflowow.tritium.utils.language.LangUtils.SizeType;
 
 import java.awt.Color;
@@ -449,10 +448,6 @@ public class EntityRenderer implements IResourceManagerReloadListener {
 		if (entity != null && this.mc.theWorld != null) {
 			double placeRange = (double) this.mc.playerController.getBlockReachDistance();
 			double attackRange = 3.0;
-			ReachEvent event = new ReachEvent(placeRange, attackRange);
-			EventManager.call(event);
-			placeRange = event.getPlaceRange();
-			attackRange = event.getAttackRange();
 
 			this.mc.mcProfiler.startSection("pick");
 			this.mc.pointedEntity = null;

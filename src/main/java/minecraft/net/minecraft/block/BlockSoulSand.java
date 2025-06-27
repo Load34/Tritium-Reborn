@@ -1,6 +1,5 @@
 package net.minecraft.block;
 
-import me.imflowow.tritium.utils.events.SlowdownEvent;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -30,12 +29,7 @@ public class BlockSoulSand extends Block
      */
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
-        SlowdownEvent event = new SlowdownEvent(SlowdownEvent.Type.SoulSand,0.4);
-        EventManager.call(event);
-        if (event.isCancelled()) {
-            return;
-        }
-        entityIn.motionX *= event.getSpeed();
-        entityIn.motionZ *= event.getSpeed();
+        entityIn.motionX *= 0.4F;
+        entityIn.motionZ *= 0.4F;
     }
 }

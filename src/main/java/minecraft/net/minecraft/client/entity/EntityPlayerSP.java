@@ -1,6 +1,5 @@
 package net.minecraft.client.entity;
 
-import me.imflowow.tritium.utils.events.SlowdownEvent;
 import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.MovingSoundMinecartRiding;
@@ -711,11 +710,9 @@ public class EntityPlayerSP extends AbstractClientPlayer {
 		boolean flag2 = this.movementInput.moveForward >= f;
 		this.movementInput.updatePlayerMoveState();
 
-		final SlowdownEvent event = new SlowdownEvent(SlowdownEvent.Type.Item, 0.2);
-		EventManager.call(event);
-		if (this.isUsingItem() && !this.isRiding() && !event.isCancelled()) {
-			this.movementInput.moveStrafe *= event.getSpeed();
-			this.movementInput.moveForward *= event.getSpeed();
+		if (this.isUsingItem() && !this.isRiding()) {
+			this.movementInput.moveStrafe *= 0.2F;
+            this.movementInput.moveForward *= 0.2F;
 			this.sprintToggleTimer = 0;
 		}
 
