@@ -14,6 +14,7 @@ public class OldAnimations extends Module {
 	public BooleanValue bowScale = new BooleanValue("BowScale", true);
 	public BooleanValue rodScale = new BooleanValue("RodScale", true);
 
+	public BooleanValue hitboxRender = new BooleanValue("HitboxesRender", true);
 	public BooleanValue debugRender = new BooleanValue("DebugRender", true);
 
 	public OldAnimations() {

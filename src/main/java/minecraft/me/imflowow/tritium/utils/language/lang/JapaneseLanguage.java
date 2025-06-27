@@ -158,6 +158,7 @@ public class JapaneseLanguage implements Language{
 		langMap.put("OldAnimations", "1.7古いアニメーション");
 		langMap.put("Make your animation look like older version.", "あなたのアニメーションを古いバージョンのように見せてください。");
 		langMap.put("DebugRender", "旧版のF3+B");
+		langMap.put("HitboxesRender", "F3+Bの実際攻撃衝突ボックスを表示");
 		langMap.put("RodScale", "旧版の釣り竿サイズ");
 		langMap.put("BowScale", "旧版の弓のサイズ");
 		langMap.put("RodPositions", "旧版の釣り竿の位置");
