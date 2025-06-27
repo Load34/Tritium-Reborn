@@ -27,7 +27,6 @@ import net.minecraft.client.renderer.ThreadDownloadImageData;
 import net.minecraft.client.renderer.texture.ITextureObject;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.util.ResourceLocation;
-import tritium.netease.SkinHandler;
 
 public class SkinManager {
 	private static final ExecutorService THREAD_POOL = new ThreadPoolExecutor(0, 2, 1L, TimeUnit.MINUTES,
@@ -138,11 +137,6 @@ public class SkinManager {
 	}
 
 	public Map<Type, MinecraftProfileTexture> loadSkinFromCache(GameProfile profile) {
-		if (Tritium.version.getType() == VersionType.Development) {
-			if (Tritium.instance.getAuthmanager().getAuthtype() == 1) {
-				return SkinHandler.loadSkinFromCacheWrapper(profile);
-			}
-		}
 		return (Map) this.skinCacheLoader.getUnchecked(profile);
 	}
 

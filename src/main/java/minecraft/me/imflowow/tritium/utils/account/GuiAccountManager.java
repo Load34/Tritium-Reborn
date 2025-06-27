@@ -38,7 +38,6 @@ import tritium.api.utils.render.Rect.RenderType;
 import tritium.api.utils.render.Scissor;
 import tritium.api.utils.render.clickable.entity.ClickableRect;
 import tritium.api.utils.timer.MsTimer;
-import tritium.netease.TritiumNetease;
 
 public class GuiAccountManager extends GuiScreen {
 	public ArrayList<SimpleButton> buttons = new ArrayList();
@@ -180,23 +179,6 @@ public class GuiAccountManager extends GuiScreen {
 				}, () -> {
 				}, () -> {
 					this.addAccount.setColor(new Color(33, 33, 42).getRGB());
-				});
-		this.netease = new ClickableRect(this.width - 66, 4, 18, 18, new Color(33, 33, 42).getRGB(),
-				Rect.RenderType.Expand, () -> {
-					if (Tritium.instance.getAuthmanager().getAuth().socket == null) {
-						GuiAccountManager.info = "§cPlease set the mode to \"Netease\" first.";
-						GuiAccountManager.infotimer.reset();
-					} else {
-						Tritium.instance.getAuthmanager().getAuth().socket.disconnect();
-						Tritium.instance.getAuthmanager().getAuth().socket = new TritiumNetease();
-						Tritium.instance.getAuthmanager().getAuth().socket.send("TritiumNetease|NeteaseServer");
-					}
-				}, () -> {
-				}, () -> {
-					this.netease.setColor(new Color(44, 44, 52).getRGB());
-				}, () -> {
-				}, () -> {
-					this.netease.setColor(new Color(33, 33, 42).getRGB());
 				});
 		this.multiplayer = new ClickableRect(this.width - 44, 4, 18, 18, new Color(33, 33, 42).getRGB(),
 				Rect.RenderType.Expand, () -> {

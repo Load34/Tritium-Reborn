@@ -45,7 +45,6 @@ import tritium.api.utils.event.events.AttackEvent;
 import tritium.api.utils.event.events.KeyPressEvent;
 import tritium.api.utils.event.events.PacketEvent;
 import tritium.api.utils.event.events.SendMessageEvent;
-import tritium.netease.TritiumNetease;
 
 public class ClientListener {
 	public Minecraft mc = Minecraft.getMinecraft();
@@ -62,7 +61,6 @@ public class ClientListener {
 
 	public ItemScroller is;
 
-	public TritiumNetease skinhandler;
 
 	public ClientListener() {
 		EventManager.register(this);
