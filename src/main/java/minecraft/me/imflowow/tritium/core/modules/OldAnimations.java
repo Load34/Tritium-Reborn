@@ -20,8 +20,8 @@ public class OldAnimations extends Module {
 
 	public OldAnimations() {
 		super("OldAnimations", "Make your animation look like older version.");
-		super.addValues(sneak, blockPosition, itemPosition, damageBright, hurtAnimations, bowPositions, rodPositions,
-				bowScale, rodScale, debugRender);
+		super.addValues(sneak, blockPosition, blockAnimation, itemPosition, damageBright, hurtAnimations, bowPositions, rodPositions,
+				bowScale, rodScale, hitboxRender, debugRender);
 		super.setEnabled(true);
 	}
 
