@@ -87,6 +87,10 @@ public class KeyBinding implements Comparable<KeyBinding> {
 		return this.keyCategory;
 	}
 
+	 public static List<KeyBinding> getKeybindArray() {
+        return keybindArray;
+    }
+
 	/**
 	 * Returns true on the initial key press. For continuous querying use
 	 * {@link isKeyDown()}. Should be used in key events.
