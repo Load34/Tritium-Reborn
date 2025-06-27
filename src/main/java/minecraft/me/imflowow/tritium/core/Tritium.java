@@ -49,7 +49,7 @@ public class Tritium {
 		this.wrapper = new Wrapper();
 		this.wrapper.init(this.wrapper);
 
-		File directory = new File(Minecraft.getMinecraft().mcDataDir, "Tritium-X");
+		File directory = new File(Minecraft.getMinecraft().mcDataDir, "Tritium-R");
 		if (!directory.exists()) {
 			directory.mkdir();
 		}
@@ -103,7 +103,7 @@ public class Tritium {
 	}
 
 	public void onStop() {
-		File directory = new File(Minecraft.getMinecraft().mcDataDir, "Tritium-X");
+		File directory = new File(Minecraft.getMinecraft().mcDataDir, "Tritium-R");
 		if (!directory.exists())
 			directory.mkdir();
 		Tritium.instance.getModuleManager().saveModules();
