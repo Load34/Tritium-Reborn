@@ -10,11 +10,13 @@ import net.minecraft.client.Minecraft;
 
 public class AuthUtils {
 
-
     public MinecraftSessionService bak;
 
     public void loadAuth(int type) {
         Minecraft mc = Minecraft.getMinecraft();
+		if (bak == null) {
+			bak = mc.getSessionService();
+		}
         switch (type) {
         case 0:
             mc.setSessionService(bak);
