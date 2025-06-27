@@ -1,2 +1,5 @@
-# Tritium-Reborn
-A minecraft client named Tritium-X reborn project without original shit libraries
+<h1 align="center">Tritium Open</h1>
+<h4 align="center">A Minecraft 1.8.9 PVP Client</h4>
+
+# Generate Jar
+- ./gradlew build
