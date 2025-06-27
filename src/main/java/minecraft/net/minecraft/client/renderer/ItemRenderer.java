@@ -37,8 +37,8 @@ import org.lwjgl.opengl.GL11;
 
 import me.imflowow.tritium.core.Tritium;
 import me.imflowow.tritium.core.modules.BlockAnimations;
-import me.imflowow.tritium.core.modules.LowFire;
 import me.imflowow.tritium.core.modules.OldAnimations;
+import me.imflowow.tritium.core.modules.LowFire;
 
 public class ItemRenderer {
 	private static final ResourceLocation RES_MAP_BACKGROUND = new ResourceLocation("textures/map/map_background.png");
@@ -383,6 +383,7 @@ public class ItemRenderer {
 	 */
 	public void renderItemInFirstPerson(float partialTicks) {
 		BlockAnimations anim = (BlockAnimations) Tritium.instance.getModuleManager().getModule(BlockAnimations.class);
+		OldAnimations oldAnim = (OldAnimations) Tritium.instance.getModuleManager().getModule(OldAnimations.class);
 		if (!Config.isShaders() || !Shaders.isSkipRenderHand()) {
 			float f = 1.0F
 					- (this.prevEquippedProgress + (this.equippedProgress - this.prevEquippedProgress) * partialTicks);
@@ -418,10 +419,9 @@ public class ItemRenderer {
 						break;
 
 					case BLOCK:
-
 						BlockAnimationsEvent e = new BlockAnimationsEvent(f, false);
 						EventManager.call(e);
-						this.transformFirstPersonItem(e.getSwingProgress(), 0.0F);
+						this.transformFirstPersonItem(e.getSwingProgress(), (oldAnim.blockAnimation.getValue()) ? f1 : 0.0F);
 						if (anim.isEnabled())
 							GlStateManager.translate(anim.HoldingX.getValue().floatValue(),
 									anim.HoldingY.getValue().floatValue(), anim.HoldingZ.getValue().floatValue());

@@ -161,8 +161,8 @@ public class ChineseLanguage implements Language {
 
 		langMap.put("OldAnimations", "1.7旧动画");
 		langMap.put("Make your animation look like older version.", "让你的动画看起来像旧版本一样");
-		langMap.put("DebugRender", "旧版F3+B");
 		langMap.put("HitboxesRender", "F3+B显示实际攻击碰撞箱");
+		langMap.put("DebugRender", "旧版F3+B");
 		langMap.put("RodScale", "旧版鱼竿大小");
 		langMap.put("BowScale", "旧版弓大小");
 		langMap.put("RodPositions", "旧版鱼竿位置");
@@ -170,6 +170,7 @@ public class ChineseLanguage implements Language {
 		langMap.put("HurtAnimations", "旧版血量闪烁");
 		langMap.put("DamageBright", "旧版受伤高亮");
 		langMap.put("ItemPosition", "旧版物品模型位置");
+		langMap.put("BlockAnimation", "旧版格挡防砍动画");
 		langMap.put("BlockPosition", "旧版格挡模型位置");
 		langMap.put("Sneak", "下蹲动画");
 
