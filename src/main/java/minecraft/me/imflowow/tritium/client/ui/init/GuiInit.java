@@ -91,10 +91,10 @@ public class GuiInit extends GuiScreen {
         String lang = "english";
         switch (type) {
             case 0:
-                lang = "english";
+                lang = "English";
                 break;
             case 1:
-                lang = "chinese";
+                lang = "Chinese";
                 break;
             case 2:
                 lang = "Japanese";
