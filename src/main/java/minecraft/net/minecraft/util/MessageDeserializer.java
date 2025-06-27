@@ -32,7 +32,7 @@ public class MessageDeserializer extends ByteToMessageDecoder
         {
             PacketBuffer packetbuffer = new PacketBuffer(p_decode_2_);
             int i = packetbuffer.readVarIntFromBuffer();
-            Packet packet = ((EnumConnectionState)p_decode_1_.channel().attr(NetworkManager.attrKeyConnectionState).get()).getPacket(this.direction, i);
+            Packet<?> packet = ((EnumConnectionState)p_decode_1_.channel().attr(NetworkManager.attrKeyConnectionState).get()).getPacket(this.direction, i);
 
             if (packet == null)
             {
