@@ -113,7 +113,6 @@ public class GuiInit extends GuiScreen {
 		{
 	        Tritium.instance.getAuthmanager().getAuth().loadAuth(Tritium.instance.getAuthmanager().getAuthtype());
 		}
-        Tritium.instance.getClientListener().init();
         Tritium.initialization = false;
         mc.displayGuiScreen(new GuiMainMenu());
     }

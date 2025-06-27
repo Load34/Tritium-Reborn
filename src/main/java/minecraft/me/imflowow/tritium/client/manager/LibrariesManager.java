@@ -28,7 +28,7 @@ public class LibrariesManager {
 
 	private void loadLibraries() {
 		// plugins
-		Class[] plugins = { EPlusAntiCheat.class, StaffModules.class };
+		Class[] plugins = { StaffModules.class /* , more.class */};
 
 		for (Class class_ : plugins) {
 			this.addPlugin(class_);

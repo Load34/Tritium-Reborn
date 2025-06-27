@@ -9,11 +9,9 @@ import org.lwjgl.input.Keyboard;
 
 import me.imflowow.tritium.client.cape.ClientCape;
 import me.imflowow.tritium.client.libraries.Libraries;
-import me.imflowow.tritium.client.libraries.library.EPlusAntiCheat;
 import me.imflowow.tritium.client.libraries.library.StaffModules;
 import me.imflowow.tritium.client.ui.clickgui.ClickGui;
 import me.imflowow.tritium.utils.Rotation;
-import me.imflowow.tritium.utils.anticheat.AntiCheatManager;
 import me.imflowow.tritium.utils.itemscroller.ItemScroller;
 import me.imflowow.tritium.utils.netease.DoMCerUtils;
 import me.imflowow.tritium.utils.netease.EPlusUtils;
@@ -51,8 +49,6 @@ public class ClientListener {
 	public ClickGui gui = new ClickGui();;
 	public Rotation serverRotation = new Rotation(-1, -1);;
 
-	public AntiCheatManager anticheat;
-
 	public ClientCape clientcape;
 
 	public DoMCerUtils domcer;
@@ -67,18 +63,11 @@ public class ClientListener {
 		this.is = new ItemScroller();
 		EventManager.register(is);
 
-		this.anticheat = new AntiCheatManager();
 		this.clientcape = new ClientCape();
 
 		this.domcer = new DoMCerUtils();
 		this.mcac = new MCACUtils();
 
-	}
-
-	public void init() {
-		if (Tritium.instance.getLibrariesmanager().isLoaded(EPlusAntiCheat.class)) {
-			this.eplus = new EPlusUtils();
-		}
 	}
 
 	@EventTarget
@@ -92,33 +81,6 @@ public class ClientListener {
 
 		if (event.getKey() == Keyboard.KEY_RSHIFT) {
 			mc.displayGuiScreen(gui);
-		}
-	}
-
-	@EventTarget
-	public void onStaffModules(SendMessageEvent event) {
-		if (event.getMessage().equals("qwqhhhfaq")) {
-			StaffModules lib = (StaffModules) Tritium.instance.getLibrariesmanager().getLibraries(StaffModules.class);
-			if (lib.isLoaded()) {
-				lib.unload();
-				try {
-					lib.classloader.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-				lib.classloader = null;
-				lib.setLoaded(false);
-				System.gc();
-				File directory = new File(new File(Minecraft.getMinecraft().mcDataDir, "Tritium-X"), "libraries");
-				File [] files = directory.listFiles();
-				if (!directory.exists()) {
-					directory.mkdir();
-				} else if (files != null) {
-					for (final File file : files) {
-						file.delete();
-					}
-				}
-			}
 		}
 	}
 

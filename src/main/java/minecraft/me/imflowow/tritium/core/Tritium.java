@@ -99,7 +99,6 @@ public class Tritium {
 				Tritium.instance.getAuthmanager().loadConfig();
 				Tritium.instance.getAuthmanager().getAuth().loadAuth(Tritium.instance.getAuthmanager().getAuthtype());
 			}
-			clientlistener.init();
 		}
 	}
 
