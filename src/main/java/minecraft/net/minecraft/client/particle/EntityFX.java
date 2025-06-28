@@ -188,7 +188,10 @@ public class EntityFX extends Entity {
 		float f5 = (float) (this.prevPosX + (this.posX - this.prevPosX) * (double) partialTicks - interpPosX);
 		float f6 = (float) (this.prevPosY + (this.posY - this.prevPosY) * (double) partialTicks - interpPosY);
 		float f7 = (float) (this.prevPosZ + (this.posZ - this.prevPosZ) * (double) partialTicks - interpPosZ);
-		int i = this.getBrightnessForRender(partialTicks);
+		
+		// Disable particle lighting checks each frame.Add commentMore actions
+        int i = 15728880; // this.getBrightnessForRender(partialTicks);
+
 		int j = i >> 16 & 65535;
 		int k = i & 65535;
 		worldRendererIn
