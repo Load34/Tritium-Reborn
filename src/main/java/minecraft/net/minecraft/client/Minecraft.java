@@ -1500,7 +1500,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage {
 				case MISS:
 				default:
 					if (this.playerController.isNotCreative()) {
-						this.leftClickCounter = 10;
+						// Remove thee hitdelay of 1.7+ version
+						// this.leftClickCounter = 10;
 					}
 				}
 			}
