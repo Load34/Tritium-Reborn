@@ -21,8 +21,8 @@ import tritium.api.manager.MessageManager;
 import tritium.netease.auth.AuthManager;
 
 public class Tritium {
-//	public static Version version = new Version(Version.VersionType.Release, 1, 1, 1);
-	public static Version version = new Version(Version.VersionType.Development, 0, 1, 0);
+	public static Version version = new Version(Version.VersionType.Release, 1, 1, 2);
+//	public static Version version = new Version(Version.VersionType.Development, 0, 1, 0);
 //	public static Version version = new Version(Version.VersionType.Beta, 0, 7, 6);
 	public static Author[] authors = { new ImFl0wow(), new IsNotThread(), new MapleLeaf() };
 	public static Tritium instance = new Tritium();
