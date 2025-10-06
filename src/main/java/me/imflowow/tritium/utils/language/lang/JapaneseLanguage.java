@@ -130,6 +130,9 @@ public class JapaneseLanguage implements Language{
 		
 		langMap.put("ItemPhysic", "物理落下物");
 		langMap.put("Just ItemPhysic.", "一つのものをなくしたら、落としたものは重力の影響を受ける。");
+
+		langMap.put("NoHurtCam", "物理落下物");
+		langMap.put("Just No hurt-camera.", "傷ついた時、視点は揺れません。");
 		
 		langMap.put("KeyStrokes", "キー表示");
 		langMap.put("When you press down a key,it can show you what you press down.", "キーを押すと、どのキーを押したかが画面に表示される。");

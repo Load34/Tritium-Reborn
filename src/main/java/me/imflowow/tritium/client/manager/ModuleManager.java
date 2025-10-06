@@ -38,7 +38,7 @@ public class ModuleManager {
 		// modules
 		Class[] modules = { MotionBlur.class, Sprint.class, OldAnimations.class, Fullbright.class,
 				BlockAnimations.class, Perspective.class, WorldTime.class, ChatCopy.class, MoreParticles.class,
-				ItemPhysic.class, LowFire.class, KeyStrokes.class, BlockOverlay.class, ArmorDisplay.class,
+				ItemPhysic.class, NoHurtCam.class, LowFire.class, KeyStrokes.class, BlockOverlay.class, ArmorDisplay.class,
 				Crosshair.class, ReachDisplay.class, CPSDisplay.class, PotionDisplay.class, CustomParticles.class,
 				EnchantEffect.class, DuelInfo.class, FPSDisplay.class, ClockDisplay.class, PingDisplay.class,
 				CoordDisplay.class, SelfHealth.class, AutoGG.class, DamageDealt.class, CustomScoreboard.class };

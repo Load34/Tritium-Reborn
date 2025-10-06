@@ -8,6 +8,7 @@ import me.imflowow.tritium.core.Tritium;
 import me.imflowow.tritium.core.globals.ClientConfig;
 import me.imflowow.tritium.core.modules.Fullbright;
 import me.imflowow.tritium.core.modules.Perspective;
+import me.imflowow.tritium.core.modules.NoHurtCam;
 import me.imflowow.tritium.utils.language.LangUtils.SizeType;
 
 import java.awt.Color;
@@ -630,6 +631,8 @@ public class EntityRenderer implements IResourceManagerReloadListener {
 	}
 
 	private void hurtCameraEffect(float partialTicks) {
+		if (Tritium.instance.getModuleManager().getModule(NoHurtCam.class).isEnabled())
+			return;
 		if (this.mc.getRenderViewEntity() instanceof EntityLivingBase) {
 			EntityLivingBase entitylivingbase = (EntityLivingBase) this.mc.getRenderViewEntity();
 			float f = (float) entitylivingbase.hurtTime - partialTicks;

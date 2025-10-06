@@ -135,6 +135,9 @@ public class ChineseLanguage implements Language {
 		langMap.put("ItemPhysic", "物理掉落物");
 		langMap.put("Just ItemPhysic.", "当你丢出去一个物品时，掉落物会收到重力影响。");
 
+		langMap.put("NoHurtCam", "物理掉落物");
+		langMap.put("Just No hurt-camera.", "当你受伤时，视角不会抖动。");
+
 		langMap.put("KeyStrokes", "按键显示");
 		langMap.put("When you press down a key,it can show you what you press down.", "按下一个按键，会在图像用户界面中显示你按了什么按键。");
 		langMap.put("Mouse", "显示鼠标按键");
